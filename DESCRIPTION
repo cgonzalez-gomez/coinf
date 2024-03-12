@@ -1,0 +1,15 @@
+Package: coinf
+Title:  Estimation of different connectivity and correlation scores between transcriptomic signatures 
+Version: 0.1
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: GPL (>= 2)
+Depends: 
+biocViews:
+Imports: reshape2, furrr, stringr, purrr 
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+
