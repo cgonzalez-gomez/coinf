@@ -63,9 +63,9 @@ XSum_score <- function(S_up, S_down,pert_names, gene_names =NULL, mat_R = NULL, 
     }
   }else{
     if (class(mat_R) == "character") {
-      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), expression_val = TRUE, ncpus = ncpus)
     }else{
-      list_R <- matrixToRankedList(mat_R = mat_R, ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = mat_R, expression_val = TRUE, ncpus = ncpus)
     }
   }
   if (!is.null(mat_R) & 
@@ -159,9 +159,9 @@ XCos_score <- function(S, pert_names, gene_names =NULL, mat_R = NULL, list_ranke
     }
   }else{
     if (class(mat_R) == "character") {
-      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), expression_val = TRUE, ncpus = ncpus)
     }else{
-      list_R <- matrixToRankedList(mat_R = mat_R, ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = mat_R, expression_val = TRUE, ncpus = ncpus)
     }
   }
   if (!is.null(mat_R) & 
@@ -257,9 +257,9 @@ XCor_score <- function(S, pert_names, method = "pearson",
     }
   }else{
     if (class(mat_R) == "character") {
-      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = readRDS(mat_R), expression_val = TRUE, ncpus = ncpus)
     }else{
-      list_R <- matrixToRankedList(mat_R = mat_R, ncpus = ncpus)
+      list_R <- matrixToRankedList(mat_R = mat_R, expression_val = TRUE, ncpus = ncpus)
     }
   }
   if (!is.null(mat_R) & 
