@@ -54,7 +54,7 @@ ES_gsea <- function(Sx, R, wES) {
 #' @param wES int weight assigned to the positions in R when
 #' calculating the ES (default 1).
 #' @return weighted connectivity score
-wcs <- function(S_up, S_down, R, wES) {
+wcs <- function(S_up, S_down, R, wES=1) {
   ES_up <- ES_gsea(S_up, R, wES)
   ES_down <- ES_gsea(S_down, R, wES)
   if (sign(ES_up) != sign(ES_down)) {
