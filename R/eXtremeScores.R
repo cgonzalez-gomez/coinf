@@ -40,9 +40,6 @@ XSum <- function(S_up, S_down, R){
 #' The vectors should be named (gene names) so as the list (perturbagene names)
 #' [test the loading from path]
 #' @param ncpus number of cores used in the parallel calculations (Default 1).
-#' @param topN integer to select the N extreme drug
-#' perturbation expression data
-#' rank-ordered from the highest to the lowest gene scores (eXtreme scores)
 #' @param permuted_pval boolean set to `TRUE` to calculate the permuted pvalue
 #' of the scores. (Default FALSE)
 #' @param permute_nb number of permutation to calcule the pvalue
@@ -51,7 +48,7 @@ XSum <- function(S_up, S_down, R){
 #' `method` parameter. (Default 'BH')
 #' @export
 XSum_score <- function(S_up, S_down,pert_names, gene_names =NULL, mat_R = NULL, list_ranked_R = NULL,
-  topN = NULL, ncpus=1,permuted_pval = FALSE, permute_nb = 10000, padj_method = "BH") {
+  ncpus=1,permuted_pval = FALSE, permute_nb = 10000, padj_method = "BH") {
   if (is.null(mat_R) & is.null(list_ranked_R)){
       stop("mat_R or list_ranked_R should be defined")
   }  
@@ -136,9 +133,6 @@ XCos <- function(S, R) {
 #' The vectors should be named (gene names) so as the list (perturbagene names)
 #' [test the loading from path]
 #' @param ncpus number of cores used in the parallel calculations (Default 1).
-#' @param topN integer to select the N extreme drug
-#' perturbation expression data
-#' rank-ordered from the highest to the lowest gene scores (eXtreme scores)
 #' @param permuted_pval boolean set to `TRUE` to calculate the permuted pvalue
 #' of the scores. (Default FALSE)
 #' @param permute_nb number of permutation to calcule the pvalue
@@ -147,7 +141,7 @@ XCos <- function(S, R) {
 #' `method` parameter. (Default 'BH')
 #' @export
 XCos_score <- function(S, pert_names, gene_names =NULL, mat_R = NULL, list_ranked_R = NULL,
-  topN = NULL, ncpus=1,permuted_pval = FALSE, permute_nb = 10000, padj_method = "BH") {
+  ncpus=1,permuted_pval = FALSE, permute_nb = 10000, padj_method = "BH") {
   if (is.null(mat_R) & is.null(list_ranked_R)){
       stop("mat_R or list_ranked_R should be defined")
   }  
@@ -232,9 +226,6 @@ XCor <- function(S, R, method = "pearson"){
 #' The vectors should be named (gene names) so as the list (perturbagene names)
 #' [test the loading from path]
 #' @param ncpus number of cores used in the parallel calculations (Default 1).
-#' @param topN integer to select the N extreme drug
-#' perturbation expression data
-#' rank-ordered from the highest to the lowest gene scores (eXtreme scores)
 #' @param permuted_pval boolean set to `TRUE` to calculate the permuted pvalue
 #' of the scores. (Default FALSE)
 #' @param permute_nb number of permutation to calcule the pvalue
@@ -244,7 +235,7 @@ XCor <- function(S, R, method = "pearson"){
 #' @export
 XCor_score <- function(S, pert_names, method = "pearson",
   gene_names =NULL, mat_R = NULL, list_ranked_R = NULL,
-  topN = NULL, ncpus=1,permuted_pval = FALSE, permute_nb = 10000,
+  ncpus=1,permuted_pval = FALSE, permute_nb = 10000,
   padj_method = "BH") {
   if (is.null(mat_R) & is.null(list_ranked_R)){
       stop("mat_R or list_ranked_R should be defined")

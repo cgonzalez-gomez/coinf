@@ -153,9 +153,9 @@ normalization_cmap1 <- function(cs, touchstone,
 #' `method` parameter. (Default 'BH')
 #'@export 
 cmap1_score <- function(S_up, S_down, gene_names, pert_names, mat_R = NULL,
-  cell_line = NULL, drg_type =NULL,
+  cell_line = NULL, drg_type = NULL,
   list_ranked_R = NULL, return_raw = FALSE, ncpus=1,
-  touchstone_signatures=NULL, save_raw=FALSE, path=NULL, normalize = FALSE,
+  touchstone_signatures = NULL, save_raw = FALSE, path=NULL, normalize = FALSE,
   permuted_pval = FALSE, permute_nb = 10000, padj_method = "BH"){
   if (is.null(mat_R) & is.null(list_ranked_R)){
     stop("mat_R or list_ranked_R should be defined")

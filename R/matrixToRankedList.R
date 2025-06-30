@@ -7,8 +7,7 @@
 #' and colnames (genes).
 #' @param ncpus number of cores used in the parallel calculations (Default 1).
 #' @param expression_val boolean set to `TRUE` to return the drug
-#' perturbation expression data
-#' rank-ordered from the highest to the lowest gene scores (CMAP2).
+#' perturbation expression data rank-ordered from the highest to the lowest gene scores (CMAP2 and eXtremeScores).
 #' @param signed_rank boolean set to `TRUE` to return the drug perturbation
 #' signed rank from the highest to the lowest absolute gene scores. (CSS)
 #' @export 
